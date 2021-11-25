@@ -7,7 +7,7 @@
 - Start menu
 - Taskbar
 - File explorer (interface only)
-- Notepad (text can be downloaded)
+- Notepad (cannot download the text)
 
 ## Preview
 ![Capture25](https://user-images.githubusercontent.com/91379432/142756603-e8aa11d7-cd30-479f-959d-aa2e52b012ca.PNG)
