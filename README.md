@@ -2,7 +2,9 @@
 
 ## What is win10-web?
 - win10-web is a online simulator that simulate windows 10. fully made with HTML, CSS and JS.
-
+---
+> ### 🛑 This web simualtion of windows 10 is not anyway affliated with microsft and it is not windows cloud 365
+---
 ## Features
 - Start menu
 - Taskbar
