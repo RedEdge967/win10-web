@@ -18,4 +18,7 @@
 
 ### [Live Demo](https://codepen.io/RedEdge967/full/PoKgzep)
 
+## Can I Contribute?
+- Sure, open an issue, point out errors, and what not. Wanna fix something yourselves, you're welcome to Fork or clone this and I appreciate it.
+
 > Don't just fork, Star too...⭐
