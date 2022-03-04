@@ -3,4 +3,7 @@
 # win10-web
 - A web recreation of microsoft's operating system, windows 10 in html, css and javascript.
 
+### 🛑 Notice
+> Please notice that this web recreation of windows 10 is not in anyway affliated with Microsoft or its products. and this also not windows 365 cloud PC.
+
 
