@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Windows 10 Concept v2.0</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body onload="startTime()">
+    <div style="padding: 20px;">Windows 10 Concept <br> by RedEdge967</div>
+    <div class="container">
+      <div class="taskbar">
+        <div class="icon" id="menuTrigger" onclick="hide()"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700209883643954/windows-10-32.png" height="32"></div>
+        <div class="icon" onclick="hideSearchBox()"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700142874787900/search-32.png" height="32"></div>
+        <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700065125236736/explorer-32.png" height="32"></div>
+
+        <div class="icon right" onclick="hideNotifications()"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700108352389160/notification-48.png" height="32"></div>
+        <div class="right" id="clock"></div>
+        <div class="icon right"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700164869980160/speaker-48.png" height="32"></div>
+        <div class="icon right"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700207768797205/wi-fi-connected-48.png" height="32"></div>
+      </div>
+      <div id="startMenu" class="start" style="display: none;">
+        <div class="relative">
+          <div class="left-bar-top">
+            <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700194435629116/user-32.png" height="32"></div>
+            <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700045567721522/computer-32.png" height="32"></div>
+            <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700146930679818/settings-32.png" height="32"></div>
+          </div>
+          <div class="left-bar">
+            <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700157454450718/sleep-32.png" height="32"></div>
+            <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700096809533510/hibernate-32.png" height="32"></div>
+            <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700136164687872/restart-32.png" height="32"></div>
+            <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700151599333457/shutdown-32.png" height="32"></div>
+          </div>
+          <div class="list">
+            <div class="element">
+              <span class="letter">C</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700038780813332/calendar-32.png" height="32px" style="vertical-align:middle"> Calendar
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700041356115988/chrome-48.png" height="32px" style="vertical-align:middle"> Chrome
+            </div>
+            <div class="element">
+              <span class="letter">D</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700053103837214/defender-32.png" height="32px" style="vertical-align:middle"> Windows Defender
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700055985848371/discord-new-logo-48.png" height="32px" style="vertical-align:middle"> Discord
+            </div>
+            <div class="element">
+              <span class="letter">E</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700063271354368/epic-games-48.png" height="32px" style="vertical-align:middle"> Epic Games Launcher
+            </div>
+            <div class="element">
+              <span class="letter">G</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700081278025728/github-48.png" height="32px" style="vertical-align:middle"> Github Desktop
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700087384801351/gog-galaxy-48.png" height="32px" style="vertical-align:middle"> GOG Galaxy
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700091922120754/groove-32.png" height="32px" style="vertical-align:middle"> Groove
+            </div>
+            <div class="element">
+              <span class="letter">M</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700059370389576/edge-32.png" height="32px" style="vertical-align:middle"> Microsoft Edge
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700185228738590/store-32.png" height="32px" style="vertical-align:middle"> Microsoft Store
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700101792104478/movies-tv-32.png" height="32px" style="vertical-align:middle"> Movies & TV
+            </div>
+            <div class="element">
+              <span class="letter">O</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700110825979904/office-2019-32.png" height="32px" style="vertical-align:middle"> Office 2019
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700113808130098/origin-48.png" height="32px" style="vertical-align:middle"> Origin
+            </div>
+            <div class="element">
+              <span class="letter">P</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700126642700328/paint-32.png" height="32px" style="vertical-align:middle"> Paint
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700116593672232/paint-3d-32.png" height="32px" style="vertical-align:middle"> Paint 3D
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700129230454834/photos-32.png" height="32px" style="vertical-align:middle"> Photos
+            </div>
+            <div class="element">
+              <span class="letter">S</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700146930679818/settings-32.png" height="32px" style="vertical-align:middle"> Settings
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700162353659904/solitaire-collection-32.png" height="32px" style="vertical-align:middle"> Solitaire
+            </div>         
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700166547832892/spotify-48.png" height="32px" style="vertical-align:middle"> Spotify
+            </div>  
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700168333950976/steam-48.png" height="32px" style="vertical-align:middle"> Steam
+            </div>   
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700183534108703/sticky-notes-32.png" height="32px" style="vertical-align:middle"> Sticky Notes
+            </div>
+            <div class="element">
+              <span class="letter">T</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700048204890212/console-32.png" height="32px" style="vertical-align:middle"> Terminal
+            </div>
+            <div class="element">
+              <span class="letter">U</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700200278949888/uplay-app-48.png" height="32px" style="vertical-align:middle"> Ubisoft Connect
+            </div>
+            <div class="element">
+              <span class="letter">V</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700198117965845/visual-studio-2019-48.png" height="32px" style="vertical-align:middle"> Visual Studio 2019
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700201158574110/visual-studio-code-2019-32.png" height="32px" style="vertical-align:middle"> Visual Studio Code
+            </div>
+            <div class="element">
+              <span class="letter">W</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700203268964412/weather-32.png" height="32px" style="vertical-align:middle"> Weather
+            </div>
+            <div class="element">
+              <span class="letter">X</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700213951201290/xbox-32.png" height="32px" style="vertical-align:middle"> Xbox
+            </div>
+          </div>
+          <div class="tiles-section">
+              <div class="group-title">
+                Usefull
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700041356115988/chrome-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700166547832892/spotify-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700055985848371/discord-new-logo-48.png" height="48px"> 
+              </div>
+              <div class="group-title">
+                Gaming
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700168333950976/steam-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700063271354368/epic-games-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700200278949888/uplay-app-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700087384801351/gog-galaxy-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700113808130098/origin-48.png" height="48px"> 
+              </div>
+              <div class="group-title">
+                Programming
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700198117965845/visual-studio-2019-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700081278025728/github-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700048204890212/console-32.png" height="48px"> 
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="search-box" id="searchBox" style="display: none;">
+        <div class="search-bar">
+          <input type="text" placeholder="Type here to search">
+        </div>
+        <div class="popular-apps">
+          <div style="padding: 10px;">Popular Apps</div>
+          <div class="app"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700041356115988/chrome-48.png"></div>
+          <div class="app"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700055985848371/discord-new-logo-48.png"></div>
+          <div class="app"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700168333950976/steam-48.png"></div>
+          <div class="app"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700166547832892/spotify-48.png"></div>
+          <div class="app"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700198117965845/visual-studio-2019-48.png"></div>
+        </div>
+        <div class="recently-launched">
+          <div style="padding: 10px;">Recently Launched</div>
+          <div class="element" style="display: inline-block;"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700041356115988/chrome-48.png" style="vertical-align:middle">Chrome</div>
+          <div class="element" style="display: inline-block;"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700087384801351/gog-galaxy-48.png" style="vertical-align:middle">GOG Galaxy</div>
+          <div class="element" style="display: inline-block;"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700081278025728/github-48.png" style="vertical-align:middle">Github Desktop</div>
+        </div>
+      </div>
+      <div class="notifications" style="display: none;" id="notifications">
+        <div style="padding: 10px; text-align: center; font-size: 32px;">Notifications</div>
+        <div class="notification" id="notify">
+          <div style="text-align: center; padding: 10px; border-top-left-radius: 5px; border-top-right-radius: 5px; background: rgba(0, 0, 0, 0.15); font-size: 20px;"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700168333950976/steam-48.png" height="26" style="vertical-align:middle;float: left;" >Steam<div style="float: right;"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700044514426920/close-window-32.png" height="24px" onclick="hideNotify()"></div></div>
+          <div style="padding: 10px;"><img height="100px" style="border-radius: 3px;vertical-align:middle" src="https://image.api.playstation.com/vulcan/img/rnd/202009/2913/TQKAd8U6hnIFQIIcz6qnFh8C.png" ><span style="margin-left: 5px;"> Game from your wishlist is on sale!</span></div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
