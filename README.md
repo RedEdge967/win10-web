@@ -1,29 +1,19 @@
+> 🛑 Notice: you are viewing the beta version (v2) of windows 10 web. you can view the windows 10 web v1 from the [`backup-v1`](https://github.com/RedEdge967/win10-web/tree/backup-v1) branch. Thank you!
+
 # win10-web
+- A web recreation of microsoft's operating system, windows 10 in html, css and javascript.
 
-## What is win10-web?
-- win10-web is a online simulator that simulate windows 10. fully made with HTML, CSS and JS.
----
-> ### 🛑 This web simualtion of windows 10 is not anyway affliated with microsft and it is not windows cloud 365
----
-## Features
-- Start menu
-- Taskbar
-- File explorer (interface only)
-- Notepad (cannot download the text)
+### 🛑 Notice
+> Please notice that this web recreation of windows 10 is not in anyway affliated with Microsoft or its products. and this also not windows 365 cloud PC.
 
-## Preview
-![Capture25](https://user-images.githubusercontent.com/91379432/142756603-e8aa11d7-cd30-479f-959d-aa2e52b012ca.PNG)
-![Capture26](https://user-images.githubusercontent.com/91379432/142756607-5c00d90a-50db-4b84-9f9d-d1e94ec11ba7.PNG)
-![Capture27](https://user-images.githubusercontent.com/91379432/142756611-618366c5-2cfa-4ae9-b9df-9763f2e88193.PNG)
+## Link: https://rededge967.github.io/win10-web/
 
-### [Live Demo](https://codepen.io/RedEdge967/full/PoKgzep)
+### Gallery
+|![Capture68](https://user-images.githubusercontent.com/91379432/156756951-3bcb9290-5bf7-4dc0-a885-f579cc82fb3d.PNG)|![Capture69](https://user-images.githubusercontent.com/91379432/156757008-77562c56-d2fe-4ba0-8dab-1c48124428a8.PNG)|
+|-|-|
+|![Capture70](https://user-images.githubusercontent.com/91379432/156757098-4d4c7e85-982d-408b-a59f-022b40b79c78.PNG)|![Capture71](https://user-images.githubusercontent.com/91379432/156757129-8d6e3796-e1f5-432c-9ab6-bf11523cbd49.PNG)|
 
-## Can I [Contribute?](https://github.com/RedEdge967/win10-web/blob/master/CONTRIBUTING.md)
-- Sure, open an issue, point out errors, and what not. Wanna fix something yourselves, you're welcome to open a pull request and I appreciate it.
----
-### Browser Support
-![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png) | ![IE](https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
----
-> Don't just fork, Star too...⭐
+## Can I contribute?
+- Sure. open an issue, point out errors and what not? wanna fix something yourself, open a PR and I appreciate it.
+
+*If you enjoyed and loved this web recreation of windows 10, please make sure you are starring and forking this repo. fork this repo and improve this project by opening a PR. Thank you!*

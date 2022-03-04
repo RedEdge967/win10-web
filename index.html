@@ -2,482 +2,240 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Windows 10 in CSS</title>
-  <!-- add icon link -->
-  <link rel = "icon" href="1200px-Windows_logo_-_2012.svg.png"
-  type = "png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
-<link rel='stylesheet' href='https://cdn.rawgit.com/desandro/masonry/master/dist/masonry.pkgd.min.js'><link rel="stylesheet" href="./style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <title>Windows 10 Concept (Beta Version)</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="1200px-Windows_logo_-_2012.svg.png">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<body onload="startTime()">
+    <div style="padding: 20px;">Windows 10 Concept <br> by RedEdge967</div>
+    <div class="container">
+      <div class="taskbar">
+        <div class="icon" id="menuTrigger" onclick="hide()"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700209883643954/windows-10-32.png" height="32"></div>
+        <div class="icon" onclick="hideSearchBox()"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700142874787900/search-32.png" height="32"></div>
+        <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700065125236736/explorer-32.png" height="32"></div>
 
-
-
-<div class="desktop">
-  <div class="start-menu-fade"></div>
-  <div class="start-menu">
-    <div class="start-menu__list">
-      <div class="media">
-        <a class="user-info menu-toggle" href="#" data-menu="user">
-        <img class="user-info__img media__img" src="https://media-exp1.licdn.com/dms/image/C5603AQF2iQHPNGx4dw/profile-displayphoto-shrink_200_200/0/1634986415083?e=1643241600&v=beta&t=WBFQWzhlU7MZcN4xFtvWF5f9EhsZpIVvdzCcPpQn2xI" alt="User image">
-        <div class="user-info__name media__body">
-          Chandula
-        </div>
-        </a>
-        <div class="menu" data-menu="user">
-          <a href="#">Change account picture</a>
-          <a href="#">Lock</a>
-          <a href="#">Sign out</a>
-        </div>
-        <a class="user-info__power menu-toggle" href="#" data-menu="power">
-          <i class="fa fa-power-off"></i>
-          
-        </a>
+        <div class="icon right" onclick="hideNotifications()"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700108352389160/notification-48.png" height="32"></div>
+        <div class="right" id="clock"></div>
+        <div class="icon right"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700164869980160/speaker-48.png" height="32"></div>
+        <div class="icon right"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700207768797205/wi-fi-connected-48.png" height="32"></div>
       </div>
-      
-      <div class="menu" data-menu="power">
-            <a href="#">Sleep</a>
-            <a href="#">Power off</a>
-            <a href="#">Restart</a>
+      <div id="startMenu" class="start" style="display: none;">
+        <div class="relative">
+          <div class="left-bar-top">
+            <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700194435629116/user-32.png" height="32"></div>
+            <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700045567721522/computer-32.png" height="32"></div>
+            <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700146930679818/settings-32.png" height="32"></div>
           </div>
-      
-
-      <ul class="start-menu__recent">
-        <li class="start-menu__explorer">
-          <a href="#" data-window="explorer">
-            <i class="fa fa-folder"></i>
-            File Explorer
-          </a>
-        </li>
-        <li class="start-menu__mail">
-          <a href="#" data-window="mail">
-            <i class="fa fa-envelope"></i>
-            Mail
-          </a>
-        </li>
-        <li class="start-menu__notepad">
-          <a href="#" data-window="notepad">
-            <i class="fa fa-pencil"></i>
-            Notepad
-          </a>
-        </li>
-        <li class="start-menu__explorer">
-          <a href="#">
-            <i class="fa fa-folder"></i>
-            File Explorer
-          </a>
-        </li>
-        <li class="start-menu__mail">
-          <a href="#">
-            <i class="fa fa-envelope"></i>
-            Mail
-          </a>
-        </li>
-        <li class="start-menu__notepad">
-          <a href="#">
-            <i class="fa fa-pencil"></i>
-            Notepad
-          </a>
-        </li>
-      </ul>
-      
-      <a class="all-apps" href="#">
-        All apps
-        <i class="fa fa-arrow-right"></i>
-      </a>
-      <form class="search">
-      <input type="text" class="search__input" placeholder="Ask me anything">
-      <button class="search__btn">
-        </button>
-      </form>
-    </div>
-    <div class="start-screen-scroll">
-    <div class="start-screen">
-      <a class="start-screen__tile start-screen__tile--explorer masonry-item" href="#" data-window="explorer">
-        <i class="fa fa-folder"></i>
-        <span>File Explorer</span>
-      </a>
-      <a class="start-screen__tile masonry-item" href="#">
-      </a>
-      <a class="start-screen__tile start-screen__tile--wide masonry-item" href="#"  data-ss-colspan="2">
-      </a>
-      <div class="start-screen__smallgroup masonry-item">
-      <a class="start-screen__tile start-screen__tile--small" href="#"></a>
-        <a class="start-screen__tile start-screen__tile--small" href="#"></a>
-        <a class="start-screen__tile start-screen__tile--small" href="#"></a>
+          <div class="left-bar">
+            <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700157454450718/sleep-32.png" height="32"></div>
+            <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700096809533510/hibernate-32.png" height="32"></div>
+            <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700136164687872/restart-32.png" height="32"></div>
+            <div class="icon"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700151599333457/shutdown-32.png" height="32"></div>
+          </div>
+          <div class="list">
+            <div class="element">
+              <span class="letter">C</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700038780813332/calendar-32.png" height="32px" style="vertical-align:middle"> Calendar
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700041356115988/chrome-48.png" height="32px" style="vertical-align:middle"> Chrome
+            </div>
+            <div class="element">
+              <span class="letter">D</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700053103837214/defender-32.png" height="32px" style="vertical-align:middle"> Windows Defender
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700055985848371/discord-new-logo-48.png" height="32px" style="vertical-align:middle"> Discord
+            </div>
+            <div class="element">
+              <span class="letter">E</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700063271354368/epic-games-48.png" height="32px" style="vertical-align:middle"> Epic Games Launcher
+            </div>
+            <div class="element">
+              <span class="letter">G</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700081278025728/github-48.png" height="32px" style="vertical-align:middle"> Github Desktop
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700087384801351/gog-galaxy-48.png" height="32px" style="vertical-align:middle"> GOG Galaxy
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700091922120754/groove-32.png" height="32px" style="vertical-align:middle"> Groove
+            </div>
+            <div class="element">
+              <span class="letter">M</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700059370389576/edge-32.png" height="32px" style="vertical-align:middle"> Microsoft Edge
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700185228738590/store-32.png" height="32px" style="vertical-align:middle"> Microsoft Store
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700101792104478/movies-tv-32.png" height="32px" style="vertical-align:middle"> Movies & TV
+            </div>
+            <div class="element">
+              <span class="letter">O</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700110825979904/office-2019-32.png" height="32px" style="vertical-align:middle"> Office 2019
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700113808130098/origin-48.png" height="32px" style="vertical-align:middle"> Origin
+            </div>
+            <div class="element">
+              <span class="letter">P</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700126642700328/paint-32.png" height="32px" style="vertical-align:middle"> Paint
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700116593672232/paint-3d-32.png" height="32px" style="vertical-align:middle"> Paint 3D
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700129230454834/photos-32.png" height="32px" style="vertical-align:middle"> Photos
+            </div>
+            <div class="element">
+              <span class="letter">S</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700146930679818/settings-32.png" height="32px" style="vertical-align:middle"> Settings
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700162353659904/solitaire-collection-32.png" height="32px" style="vertical-align:middle"> Solitaire
+            </div>         
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700166547832892/spotify-48.png" height="32px" style="vertical-align:middle"> Spotify
+            </div>  
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700168333950976/steam-48.png" height="32px" style="vertical-align:middle"> Steam
+            </div>   
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700183534108703/sticky-notes-32.png" height="32px" style="vertical-align:middle"> Sticky Notes
+            </div>
+            <div class="element">
+              <span class="letter">T</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700048204890212/console-32.png" height="32px" style="vertical-align:middle"> Terminal
+            </div>
+            <div class="element">
+              <span class="letter">U</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700200278949888/uplay-app-48.png" height="32px" style="vertical-align:middle"> Ubisoft Connect
+            </div>
+            <div class="element">
+              <span class="letter">V</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700198117965845/visual-studio-2019-48.png" height="32px" style="vertical-align:middle"> Visual Studio 2019
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700201158574110/visual-studio-code-2019-32.png" height="32px" style="vertical-align:middle"> Visual Studio Code
+            </div>
+            <div class="element">
+              <span class="letter">W</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700203268964412/weather-32.png" height="32px" style="vertical-align:middle"> Weather
+            </div>
+            <div class="element">
+              <span class="letter">X</span>
+            </div>
+            <div class="element">
+              <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700213951201290/xbox-32.png" height="32px" style="vertical-align:middle"> Xbox
+            </div>
+          </div>
+          <div class="tiles-section">
+              <div class="group-title">
+                Usefull
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700041356115988/chrome-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700166547832892/spotify-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700055985848371/discord-new-logo-48.png" height="48px"> 
+              </div>
+              <div class="group-title">
+                Gaming
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700168333950976/steam-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700063271354368/epic-games-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700200278949888/uplay-app-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700087384801351/gog-galaxy-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700113808130098/origin-48.png" height="48px"> 
+              </div>
+              <div class="group-title">
+                Programming
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700198117965845/visual-studio-2019-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700081278025728/github-48.png" height="48px"> 
+              </div>
+              <div class="tile">
+                <img src="https://cdn.discordapp.com/attachments/777615056220192808/824700048204890212/console-32.png" height="48px"> 
+              </div>
+          </div>
+        </div>
       </div>
-      <a class="start-screen__tile masonry-item" href="#">
-      </a>
-      <a class="start-screen__tile masonry-item" href="#">
-      </a>
-      <a class="start-screen__tile start-screen__tile--notepad masonry-item" href="#">
-      </a>
-      <a class="start-screen__tile start-screen__tile--large start-screen__tile--mail masonry-item" href="#" data-ss-colspan="2">
-        <i class="fa fa-envelope"></i>
-        <span>Mail</span>
-      </a>
-      <a class="start-screen__tile masonry-item" href="#">
-      </a>
-      <a class="start-screen__tile masonry-item" href="#">
-      </a>
-      <a class="start-screen__tile masonry-item" href="#">
-      </a>
-    </div>
-    </div>
-  </div>
-  
-  <div class="taskbar">
-    <a class="taskbar__item taskbar__item--start" href="#" data-window="start">
-      <i class="fa fa-windows"></i>
-    </a>
-    <a class="taskbar__item taskbar__item--explorer" href="#" data-window="explorer">
-      <i class="fa fa-folder"></i>
-    </a>
-    <a class="taskbar__item taskbar__item--mail" href="#" data-window="mail">
-      <i class="fa fa-envelope"></i>
-    </a>
-    <a class="taskbar__item taskbar__item--notepad" href="#" data-window="notepad">
-      <i class="fa fa-pencil"></i>
-    </a>
-    
-    <div class="taskbar__tray">
-      <span class="time">
-        <script>
-          
-         </script>
-      </span>
-    </div>
-  </div>
-  
-  
-  <div class="window window--explorer window--minimized" data-window="explorer" style="width:670px;height:400px;top:5%;left:10%;">
-    <div class="window__titlebar">
-      <div class="window__controls window__controls--left">
-        <a class="window__icon" href="#"><i class="fa fa-folder"></i></a>
-        <a class="window__menutoggle" href="#"><i class="fa fa-bars"></i></a>
+      <div class="search-box" id="searchBox" style="display: none;">
+        <div class="search-bar">
+          <input type="text" placeholder="Type here to search">
+        </div>
+        <div class="popular-apps">
+          <div style="padding: 10px;">Popular Apps</div>
+          <div class="app"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700041356115988/chrome-48.png"></div>
+          <div class="app"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700055985848371/discord-new-logo-48.png"></div>
+          <div class="app"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700168333950976/steam-48.png"></div>
+          <div class="app"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700166547832892/spotify-48.png"></div>
+          <div class="app"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700198117965845/visual-studio-2019-48.png"></div>
+        </div>
+        <div class="recently-launched">
+          <div style="padding: 10px;">Recently Launched</div>
+          <div class="element" style="display: inline-block;"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700041356115988/chrome-48.png" style="vertical-align:middle">Chrome</div>
+          <div class="element" style="display: inline-block;"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700087384801351/gog-galaxy-48.png" style="vertical-align:middle">GOG Galaxy</div>
+          <div class="element" style="display: inline-block;"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700081278025728/github-48.png" style="vertical-align:middle">Github Desktop</div>
+        </div>
       </div>
-      
-      
-      
-      <span class="window__title">
-        File Explorer
-      </span>
-      
-      <div class="window__controls window__controls--right">
-        <a class="window__minimize" href="#"><i class="fa fa-minus"></i></a>
-        <a class="window__maximize" href="#"><i class="fa"></i></a>
-        <a class="window__close" href="#"><i class="fa fa-close"></i></a>
-      </div>
-    </div>
-    
-    <ul class="window__menu">
-        <li>
-          <a href="#">
-            <i class="menu__icon fa fa-search"></i>
-            Search
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="menu__icon fa fa-share-alt"></i>
-            Share
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="menu__icon fa fa-plug"></i>
-            Devices
-          </a>
-        </li>
-        <li class="divided">
-          <a href="#">
-            <i class="menu__icon fa fa-cog"></i>
-            Settings
-          </a>
-        </li>
-      </ul>
-    
-    <div class="window__actions">
-      <a class="window__back" href="#">
-        <i class="fa fa-arrow-left"></i>
-      </a>
-      <a class="window__forward" href="#">
-        <i class="fa fa-arrow-right"></i>
-      </a>
-      <div class="window__path">
-        <a href="#">
-        <i class="fa fa-desktop"></i>
-        Desktop
-        </a>
-      </div>
-      <form class="search">
-        <input type="text" class="search__input" placeholder="Search files and folders">
-        <button class="search__btn">
-        </button>
-      </form>
-    </div>
-    
-    <div class="window__body">
-      
-      <div class="window__side">
-        
-        <ul class="side__list">
-          <li><a href="#">Home</a></li>
-          <li>
-            <a href="#">Favorites</a>
-            <ul>
-              <li><a href="#">Desktop</a></li>
-              <li><a href="#">Downloads</a></li>
-              <li><a href="#">Recent Places</a></li>
-          </ul>
-        </li>
-          <li>
-            <a href="#">This Device</a>
-            <ul style="display:none">
-              <li><a href="#">Desktop</a>
-                <ul style="display:none">
-                  <li>
-                    <a href="#">Folder 1</a>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="#">Documents</a></li>
-              <li><a href="#">Downloads</a></li>
-              <li><a href="#">Local Disk  (C:)</a></li>
-              <li><a href="#">New Volume  (D:)</a></li>
-        </ul>
-      </div>
-      <div class="window__main">
-        <div class="folders">
-          <a href="#">
-            <i class="fa fa-folder"></i>
-            <span>Folder 1</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-folder"></i>
-            <span>Folder 2</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-folder"></i>
-            <span>Folder 3</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-folder"></i>
-            <span>Folder 4</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-folder"></i>
-            <span>Folder 5</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-folder"></i>
-            <span>Folder 6</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>File</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>File</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>File</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>File</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>File</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>File</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>File</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>File</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>File</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>File</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>File</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>File</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>File</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>File</span>
-          </a>
-          <a href="#">
-            <i class="fa fa-file"></i>
-            <span>File</span>
-          </a>
+      <div class="notifications" style="display: none;" id="notifications">
+        <div style="padding: 10px; text-align: center; font-size: 32px;">Notifications</div>
+        <div class="notification" id="notify">
+          <div style="text-align: center; padding: 10px; border-top-left-radius: 5px; border-top-right-radius: 5px; background: rgba(0, 0, 0, 0.15); font-size: 20px;"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700168333950976/steam-48.png" height="26" style="vertical-align:middle;float: left;" >Steam<div style="float: right;"><img src="https://cdn.discordapp.com/attachments/777615056220192808/824700044514426920/close-window-32.png" height="24px" onclick="hideNotify()"></div></div>
+          <div style="padding: 10px;"><img height="100px" style="border-radius: 3px;vertical-align:middle" src="https://image.api.playstation.com/vulcan/img/rnd/202009/2913/TQKAd8U6hnIFQIIcz6qnFh8C.png" ><span style="margin-left: 5px;"> Game from your wishlist is on sale!</span></div>
         </div>
       </div>
     </div>
-    
-  </div>
-    
-     <div class="window window--mail" data-window="mail" style="display:none;width:400px;height:300px;top:40%;left:40%;">
-    <div class="window__titlebar">
-      <div class="window__controls window__controls--left">
-        <a class="window__icon" href="#"><i class="fa fa-envelope"></i></a>
-        <a class="window__menutoggle" href="#"><i class="fa fa-bars"></i></a>
-      </div>
-      
-      
-      
-      <span class="window__title">
-        Mail
-      </span>
-      
-      <div class="window__controls window__controls--right">
-        <a class="window__minimize" href="#"><i class="fa fa-minus"></i></a>
-        <a class="window__maximize" href="#"><i class="fa"></i></a>
-        <a class="window__close" href="#"><i class="fa fa-close"></i></a>
-      </div>
-    </div>
-    
-    <ul class="window__menu">
-        <li>
-          <a href="#">
-            <i class="menu__icon fa fa-search"></i>
-            Search
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="menu__icon fa fa-share-alt"></i>
-            Share
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="menu__icon fa fa-plug"></i>
-            Devices
-          </a>
-        </li>
-        <li class="divided">
-          <a href="#">
-            <i class="menu__icon fa fa-cog"></i>
-            Settings
-          </a>
-        </li>
-      </ul>
-    
-    <div class="window__body">
-      <div class="window__side">
-        
-      </div>
-      <div class="window__main">
-        
-      </div>
-    </div>
-    
-  </div>
-    
-    
- <div class="window window--notepad" data-window="notepad" style="display:none;width:600px;height:300px;top:10%;left:30%;">
-    <div class="window__titlebar">
-      <div class="window__controls window__controls--left">
-        <a class="window__icon" href="#"><i class="fa fa-pencil"></i></a>
-        <a class="window__menutoggle" href="#"><i class="fa fa-bars"></i></a>
-      </div>
-      
-      
-      
-      <span class="window__title">
-        Notepad
-      </span>
-      
-      <div class="window__controls window__controls--right">
-        <a class="window__minimize" href="#"><i class="fa fa-minus"></i></a>
-        <a class="window__maximize" href="#"><i class="fa"></i></a>
-        <a class="window__close" href="#"><i class="fa fa-close"></i></a>
-      </div>
-    </div>
-    
-    <ul class="window__menu">
-        <li>
-          <a href="#">
-            <i class="menu__icon fa fa-download"></i>
-            Save
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="menu__icon fa fa-folder-open"></i>
-            Open
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i class="menu__icon fa fa-print"></i>
-            Print
-          </a>
-        </li>
-      <li>
-          <a href="#">
-            <i class="menu__icon fa fa-share-alt"></i>
-            Share
-          </a>
-        </li>
-      
-        <li class="divided">
-          <a href="#">
-            <i class="menu__icon fa fa-file"></i>
-            Format
-          </a>
-      </li>
-      <li>
-          <a href="#">
-            <i class="menu__icon fa fa-cog"></i>
-            Settings
-        </a>
-      </li>
-   </ul>
-    
-    <div class="window__body">
-      <div class="window__main">
-        <textarea class="full-textarea"></textarea>
-      </div>
-    </div>
-    
-  </div>
 
-    
-    
-</div>
+  </body>
+
+</html>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
-<script src='https://cdn.rawgit.com/desandro/masonry/master/dist/masonry.pkgd.min.js'></script><script  src="./script.js"></script>
+  <script  src="./script.js"></script>
 
 </body>
 </html>
